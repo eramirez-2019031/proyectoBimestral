@@ -5,10 +5,12 @@ const RoleSchema = Schema ({
         type:String,
         required: [true, "El nombre del producto es obligatorio"]
     },
+
     precioP:{
         type:String,
         required:[true,"el precio del producto es requerido"]
     },
+    
     estadoP:{
         type:String,
         enum: ['Disponible','No Disponible'],
