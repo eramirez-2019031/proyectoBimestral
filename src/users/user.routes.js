@@ -15,6 +15,7 @@ import {
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { tieneRole } from "../middlewares/validar-roles.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
+import { login } from "../auth/auth.controller.js";
 
 const router = Router();
 
@@ -31,7 +32,7 @@ router.get(
 );
 
 router.post(
-  "/",
+  "/registro",
   [
     check("nombre", "El nombre es obligatorio").not().isEmpty(),
     check("password", "El password debe ser mayor a 6 caracteres").isLength({
@@ -66,5 +67,15 @@ router.delete(
   ],
   usuariosDelete
 );
+
+router.post('/login',
+    [
+        check('correo', 'El email no es un correo valido').isEmail(),
+        check('password', 'La contraseña es obligatoria').not().isEmpty(),
+        validarCampos
+    ], login
+    );
+
+
 
 export default router;

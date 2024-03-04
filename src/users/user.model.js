@@ -17,26 +17,17 @@ const UserSchema = mongoose.Schema({
     required: [true, "La contraseña es obligaroria"],
   },
 
-  img: {
-    type: String,
-  },
 
   role: {
     type: String,
     required: true,
-    enum: ["ADMIN_ROLE", "USER_ROLE"],
+    enum: ["ADMIN_ROLE", "CLIENTE_ROLE"],
   },
 
   estado: {
     type: Boolean,
     default: true,
   },
-
-  google: {
-    type: Boolean,
-    default: true,
-  },
-  
 });
 
 UserSchema.methods.toJSON = function(){

@@ -12,8 +12,8 @@ class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
-        this.usuarioPath = '/coffeApi/v1/users'
-        this.authPath = '/coffeApi/v1/auth'
+        this.usuarioPath = '/api/v1/users'
+        this.authPath = '/api/v1/auth'
 
         this.middlewares();
         this.conectarDB();
