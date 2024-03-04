@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "65e55a53333790dc3c32dee5"
+  },
+  "user": {
+    "$oid": "65e20c14da6d87fd236a2fee"
+  },
+  "post": {
+    "$oid": "65e559c78fbce054cbaf5a9e"
+  },
+  "titulo": "Wow",
+  "descripcion": "que loco no?",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e55a9c333790dc3c32dee9"
+  },
+  "user": {
+    "$oid": "65e20c14da6d87fd236a2fee"
+  },
+  "post": {
+    "$oid": "65e559c78fbce054cbaf5a9e"
+  },
+  "titulo": "y este random?",
+  "descripcion": "eso es low elo",
+  "__v": 0
+}]

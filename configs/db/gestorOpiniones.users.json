@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "65e559563c245a9deefd76ca"
+  },
+  "nameUser": "mapache",
+  "email": "mapache@kinal.edu.gt",
+  "password": "$2a$10$avmLQt29J6v7lDxB8IynCezkdzsyFeUlpWVOJIFMahUKI2ZlW6e.a",
+  "estado": true,
+  "role": "USER_ROLE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e559613c245a9deefd76ce"
+  },
+  "nameUser": "Leonel",
+  "email": "Leonel@kinal.edu.gt",
+  "password": "$2a$10$c4eXVzGnE/hVVoAYi61T0..eF3nkFbT.aA2fs3DZL9O1ulZ61BWvW",
+  "estado": true,
+  "role": "USER_ROLE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e5596b3c245a9deefd76d1"
+  },
+  "nameUser": "Javier",
+  "email": "Javier@kinal.edu.gt",
+  "password": "$2a$10$24Zovhrzdity/LWqfwx10ug40TV9n974LM2cgDgxD/ayjlRqKdDDG",
+  "estado": true,
+  "role": "USER_ROLE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e559713c245a9deefd76d4"
+  },
+  "nameUser": "Pedro",
+  "email": "Pedro@kinal.edu.gt",
+  "password": "$2a$10$QLOc79.A.QJLO7etJdB5oO1ljSXsXIwzh1m4RoBmYJqO79H5tc7di",
+  "estado": true,
+  "role": "USER_ROLE",
+  "__v": 0
+}]

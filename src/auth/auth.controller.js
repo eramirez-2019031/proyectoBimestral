@@ -1,45 +1,64 @@
+import User from '../user/user.js';
 import bcryptjs from 'bcryptjs';
-import Usuario from '../users/user.model.js'
-import { generarJWT } from '../helpers/generate-jwt.js'; 
+import { generarJWT } from '../helpers/generar-jwt.js';
+
+export const registrarse = async (req, res) => {
+    const { nameUser, email, password, role } = req.body;
+    const usuario = new User({ nameUser, email, password, role });
+
+    const salt = bcryptjs.genSaltSync();
+    usuario.password = bcryptjs.hashSync(password, salt);
+
+    await usuario.save();
+    res.status(200).json({
+        usuario
+    });
+}
 
 export const login = async (req, res) => {
-    const { correo, password } = req.body;
+    
+    const { email, password } = req.body;
+    
+    try {
+        
+        const usuario = await User.findOne({ email });
 
-  try {
-    //verificar si el email existe:
-    const usuario = await Usuario.findOne({ correo });
 
-    if (!usuario) {
-      return res.status(400).json({
-        msg: "Credenciales incorrectas, Correo no existe en la base de datos",
-      });
+        if (!usuario) {
+            return res.status(400).json({
+                msg: 'El correo no está registrado'
+            });
+        }
+        
+
+        if (!usuario.estado) {
+            return res.status(400).json({
+                msg: 'El usuario no existe'
+            });
+        }
+
+        const validPassword = bcryptjs.compareSync(password, usuario.password);
+        if (!validPassword) {
+            return res.status(400).json({
+                msg: 'La contraseña no coincide'
+            });
+        }
+        
+
+        const token = await generarJWT(usuario.id);
+
+
+        res.status(200).json({
+            msg: 'Se inicio secion',
+            usuario,
+            token
+        });
+
+
+    } catch (error) {
+        console.log("Error:", error);
+        res.status(500).json({
+            msg: 'Error, hablele al admin'
+        });
     }
-    //verificar si el ususario está activo
-    if (!usuario.estado) {
-      return res.status(400).json({
-        msg: "El usuario no existe en la base de datos",
-      });
-    }
-    // verificar la contraseña
-    const validPassword = bcryptjs.compareSync(password, usuario.password);
-    if (!validPassword) {
-      return res.status(400).json({
-        msg: "La contraseña es incorrecta",
-      });
-    }
-    //generar el JWT
-    const token = await generarJWT( usuario.id);
-
-    res.status(200).json({
-      msg: 'Login Ok!!!',
-      usuario,
-      token
-    });
-
-  } catch (e) {
-    console.log(e);
-    res.status(500).json({
-      msg: "Comuniquese con el administrador",
-    });
-  }
 }

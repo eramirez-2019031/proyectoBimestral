@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "65e559a78fbce054cbaf5a9b"
+  },
+  "titulo": "El calentamiento global",
+  "categoria": "naturaleza",
+  "descripcion": "como amo a los perros",
+  "user": [
+    {
+      "$oid": "65e559563c245a9deefd76ca"
+    }
+  ],
+  "estado": true,
+  "comment": [],
+  "createdAt": {
+    "$date": "2024-03-04T05:18:31.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e559c78fbce054cbaf5a9e"
+  },
+  "titulo": "El valorant es peor juego",
+  "categoria": "VideoJuegos",
+  "descripcion": "Soy inmortal en valorant(solo hay 40 en guatemala)",
+  "user": [
+    {
+      "$oid": "65e559563c245a9deefd76ca"
+    }
+  ],
+  "estado": true,
+  "comment": [],
+  "createdAt": {
+    "$date": "2024-03-04T05:19:03.692Z"
+  },
+  "__v": 0
+}]

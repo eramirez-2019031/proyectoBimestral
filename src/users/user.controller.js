@@ -57,7 +57,7 @@ export const getUsuarioById = async (req, res) => {
 export const usuariosPut = async (req, res) => {
     try {
         const { id } = req.params;
-        const {nameUser, email, oldPassword, newPassword} = req.body;
+        const {nombre, email, oldPassword, newPassword} = req.body;
  
         const usuarioAutenticado = req.usuario;
         const idCoincide = usuarioAutenticado._id.toString() === id;

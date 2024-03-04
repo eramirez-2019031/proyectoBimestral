@@ -5,8 +5,9 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
-import userRoutes from '../src/users/user.routes.js';
-import authRoutes from '../src/auth/auth.routes.js'
+import userRoutes from '../src/user/user.routes.js';
+import authRoutes from '../src/auth/auth.routes.js';
+import postRoutes from '../src/post/post.routes.js';
 
 class Server{
     constructor(){
@@ -14,7 +15,7 @@ class Server{
         this.port = process.env.PORT;
         this.usuarioPath = '/api/v1/users'
         this.authPath = '/api/v1/auth'
-
+        this.postPath = '/api/v1/post'
         this.middlewares();
         this.conectarDB();
         this.routes();
@@ -34,12 +35,13 @@ class Server{
 
     routes(){
         this.app.use(this.usuarioPath, userRoutes);
-        this.app.use(this.authPath, authRoutes)
+        this.app.use(this.authPath, authRoutes);
+        this.app.use(this.postPath, postRoutes);
     }
 
     listen(){
         this.app.listen(this.port, () => {
-            console.log('Server running on port ', this.port);
+            console.log('Servidor corriendo en el puerto', this.port);
         });
     }
 }

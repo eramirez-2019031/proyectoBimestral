@@ -1,35 +1,29 @@
-import jwt from 'jsonwebtoken'
-import Usuario from '../users/user.model.js'
+import jwt from 'jsonwebtoken';
+import Usuario from '../user/user.js';
 
 export const validarJWT = async (req, res, next) => {
-    const token = req.header("x-token");
+  const token = req.header("x-token");
 
   if (!token) {
     return res.status(401).json({
-      msg: "No hay token en la petición",
+      msg: "No hay token",
     });
   }
 
   try {
-    //verificación de token
     const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-    //leer el usuario que corresponde al uid
     const usuario = await Usuario.findById(uid);
-    //verificar que el usuario exista.
-    if(!usuario){
+    if (!usuario) {
       return res.status(401).json({
-        msg: 'Usuario no existe en la base de datos'
-      })
+        msg: "Usuario no existe en la base de datos",
+      });
     }
-    //verificar si el uid está habilidato.
-    if(!usuario.estado){
+    if (!usuario.estado) {
       return res.status(401).json({
-        msg: 'Token no válido - usuario con estado:false'
-      })
+        msg: "Token no válido - usuario con estado:false",
+      });
     }
-
     req.usuario = usuario;
-
     next();
   } catch (e) {
     console.log(e),
@@ -37,4 +31,4 @@ export const validarJWT = async (req, res, next) => {
         msg: "Token no válido",
       });
   }
-}
+};
