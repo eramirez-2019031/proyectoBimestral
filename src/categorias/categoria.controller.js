@@ -39,13 +39,15 @@ export const categoriaPut = async (req, res) => {
     const { _id, ...resto} = req.body;
  
     await Categoria.findByIdAndUpdate(id, resto);
- 
-    const categoria = await Categoria.findOne({_id: id});
- 
+
+    const cat = await Categoria.findOne({_id: id});
+    
     res.status(200).json({
-        msg: 'La categoria fue actualizada correctamente',
-        categoria
-    });
+        msg: 'La catergoria fue actualizada correctamente',
+        cat
+    })
+
+
 }
 
 export const categoriaDelete = async (req, res) => {
