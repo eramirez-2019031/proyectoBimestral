@@ -8,7 +8,7 @@ export const userPut = async (req, res) => {
 
         const usuarioAutenticado = req.usuario;
         const idCoincide = usuarioAutenticado._id.toString() === id;
-        const tienePermiso = usuarioAutenticado.role === 'USER_ROLE';
+        const tienePermiso = usuarioAutenticado.role === 'ADMIN_ROLE';
 
         if (!idCoincide || !tienePermiso) {
             return res.status(403).json({
@@ -59,4 +59,6 @@ export const userPut = async (req, res) => {
     }
 };
 
-export default userPut;
+
+
+export default userPut;
