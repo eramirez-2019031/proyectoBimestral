@@ -13,13 +13,15 @@ router.put(
     [
         check("id","El id no es un formato válido de MongoDB").isMongoId(),
         validarCampos,
+        validarRol
     ], categoriaPut);
 
 router.delete(
         "/:id",
         [
             check("id","El id no es un formato válido de MongoDB").isMongoId(),
-            validarCampos
+            validarCampos,
+            validarRol
         ], categoriaDelete);
 
         

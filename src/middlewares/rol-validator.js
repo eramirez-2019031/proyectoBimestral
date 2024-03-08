@@ -1,7 +1,7 @@
 import User from '../user/user.js'; 
 
 export const validarRol = async (req, res, next) => {
-        const { ...resto } = req.body; // Suponiendo que tienes el ID del usuario en el objeto de solicitud (req)
+        const { ...resto } = req.body; 
         
         try {
 
