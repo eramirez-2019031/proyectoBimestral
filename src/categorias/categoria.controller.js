@@ -1,6 +1,8 @@
 import Categoria from '../categorias/categoria.model.js';
 import { response, json } from 'express';
 
+
+
 export const categoriaPost = async (req, res) =>{
     const { nameCat, descripcion } = req.body;
     const categoria = new Categoria({nameCat, descripcion});
