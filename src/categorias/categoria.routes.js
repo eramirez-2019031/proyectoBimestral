@@ -3,6 +3,8 @@ import { check } from 'express-validator';
 import { validarCampos } from '../middlewares/validar-campos.js';
 import { categoriaPost, categoriaGet, categoriaPut, categoriaDelete } from '../categorias/categoria.controller.js';
 
+const router = Router();
+
 router.get("/", categoriaGet);
 
 router.put(
