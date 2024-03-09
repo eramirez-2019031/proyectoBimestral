@@ -2,10 +2,9 @@ import Producto from './producto.model.js';
 import Category from '../categorias/categoria.model.js';
 import { request, response } from 'express';
 
-
 export const productoPost = async (req, res) => {
   const { name, price, category, stock } = req.body;
-  const categoryName = await Category.findOne({ name: category });
+  const categoryName = await Category.findOne({ nameCat: category });
   const producto = new Producto({
     name,
     price,
@@ -13,20 +12,18 @@ export const productoPost = async (req, res) => {
     stock,
   });
 
-
   await producto.save();
   res.status(200).json({
     msg: 'El producto fue agregado correctamente',
     producto,
   });
-
 };
 
 //Get method
-export const getProductos = async (_req, res = response) => {
+export const getProductos = async (req, res = response) => {
   try {
-    const { limit, from } = _req.query;
-    const query = { state: true };
+    const { limit, from } = req.query;
+    const query = { status: true };
 
     const [total, producto] = await Promise.all([
       Producto.countDocuments(query),
