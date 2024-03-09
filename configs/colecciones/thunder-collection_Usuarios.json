@@ -1,0 +1,72 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Usuarios",
+    "dateExported": "2024-03-09T20:46:15.053Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cd81c7bd-3a2a-4449-abfe-0a524ba05637",
+            "colId": "38a5890a-0de6-43b5-9eb1-ad80675a8998",
+            "containerId": "",
+            "name": "Loguearse",
+            "url": "http://localhost:3000/api/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T20:29:57.980Z",
+            "modified": "2024-03-09T20:29:57.980Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"mapache@kinal.edu.gt\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0938d6ff-30ac-4378-86fd-e875b8b809ea",
+            "colId": "38a5890a-0de6-43b5-9eb1-ad80675a8998",
+            "containerId": "",
+            "name": "Registrarse",
+            "url": "http://localhost:3000/api/v1/auth/registrarse",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-09T20:29:59.722Z",
+            "modified": "2024-03-09T20:32:30.221Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameUser\": \"1\",\n  \"email\": \"1@kinal.edu.gt\",\n  \"password\": \"111111\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "f0fd496c-5677-44bb-ae40-8a079e588429",
+            "colId": "38a5890a-0de6-43b5-9eb1-ad80675a8998",
+            "containerId": "",
+            "name": "EditarUsuario (token usuario)",
+            "url": "http://localhost:3000/api/v1/users/65e559613c245a9deefd76ce",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-09T20:30:22.726Z",
+            "modified": "2024-03-09T20:30:22.726Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1NTk2MTNjMjQ1YTlkZWVmZDc2Y2UiLCJpYXQiOjE3MDk1Mjk4MDcsImV4cCI6MTcwOTUzMzQwN30.hfExkaUy1nVa4V8xdzPw26bsuDpEF2WEGKV9CiVqOoM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameUser\": \"Leonel\",\n  \"email\": \"Leonel@kinal.edu.gt\",\n  \"oldPassword\": \"654321\",\n  \"newPassword\": \"654321\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

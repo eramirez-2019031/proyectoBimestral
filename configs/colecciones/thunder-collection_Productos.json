@@ -1,0 +1,80 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Productos",
+    "dateExported": "2024-03-09T20:47:48.420Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5a53c9f0-e55c-4b68-8108-4c3007c6f07d",
+            "colId": "ce660195-4dda-42c6-80de-1d1d26539f9c",
+            "containerId": "",
+            "name": "productosPost",
+            "url": "http://localhost:3000/api/v1/productos",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-09T20:37:37.654Z",
+            "modified": "2024-03-09T20:37:37.654Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nose3\",\n  \"price\": \"20.50\",\n  \"category\": \"messi\",\n  \"stock\": \"15\",\n  \"idUsuario\": \"65ebc47024b390e7cfc0dab9\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb003100-b2c6-4368-8e44-29eed72f6a0e",
+            "colId": "ce660195-4dda-42c6-80de-1d1d26539f9c",
+            "containerId": "",
+            "name": "productosGet",
+            "url": "http://localhost:3000/api/v1/productos",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-09T20:37:37.655Z",
+            "modified": "2024-03-09T20:37:37.655Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3c60f447-bbaa-4381-9d94-0c32fcaf85d4",
+            "colId": "ce660195-4dda-42c6-80de-1d1d26539f9c",
+            "containerId": "",
+            "name": "productosPut",
+            "url": "http://localhost:3000/api/v1/productos/65ebc9b22b8b6f0568ab46f8",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-09T20:37:37.657Z",
+            "modified": "2024-03-09T20:37:37.657Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"salamaleco\",\n  \"price\": \"200\",\n  \"category\": \"65ebc68a24b390e7cfc0dabe\",\n  \"stock\": \"15\",\n  \"idUsuario\": \"65ebc47024b390e7cfc0dab9\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "31c1368d-bb54-4d08-bd6d-e5f9df364ff2",
+            "colId": "ce660195-4dda-42c6-80de-1d1d26539f9c",
+            "containerId": "",
+            "name": "productosDelete",
+            "url": "http://localhost:3000/api/v1/productos/65ebc9b22b8b6f0568ab46f8",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-09T20:37:37.658Z",
+            "modified": "2024-03-09T20:37:37.658Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"idUsuario\": \"65ebc47024b390e7cfc0dab9\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
