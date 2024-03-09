@@ -1,69 +1,115 @@
 {
     "client": "Thunder Client",
     "collectionName": "Usuarios",
-    "dateExported": "2024-03-09T20:46:15.053Z",
+    "dateExported": "2024-03-13T21:42:59.794Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "cd81c7bd-3a2a-4449-abfe-0a524ba05637",
-            "colId": "38a5890a-0de6-43b5-9eb1-ad80675a8998",
+            "_id": "d3da82f5-e9a1-44a6-8f87-132d5d5611cc",
+            "colId": "60d58388-a300-4ad3-983a-5d0a82f47d8a",
             "containerId": "",
             "name": "Loguearse",
             "url": "http://localhost:3000/api/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-09T20:29:57.980Z",
-            "modified": "2024-03-09T20:29:57.980Z",
+            "created": "2024-03-13T20:40:14.607Z",
+            "modified": "2024-03-13T20:40:14.607Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"mapache@kinal.edu.gt\",\n  \"password\": \"123456\"\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "0938d6ff-30ac-4378-86fd-e875b8b809ea",
-            "colId": "38a5890a-0de6-43b5-9eb1-ad80675a8998",
-            "containerId": "",
-            "name": "Registrarse",
-            "url": "http://localhost:3000/api/v1/auth/registrarse",
-            "method": "POST",
-            "sortNum": 20000,
-            "created": "2024-03-09T20:29:59.722Z",
-            "modified": "2024-03-09T20:32:30.221Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"nameUser\": \"1\",\n  \"email\": \"1@kinal.edu.gt\",\n  \"password\": \"111111\"\n}",
+                "raw": "{\n  \"email\": \"3@kinal.edu.gt\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "reqType": "post",
             "tests": []
         },
         {
-            "_id": "f0fd496c-5677-44bb-ae40-8a079e588429",
-            "colId": "38a5890a-0de6-43b5-9eb1-ad80675a8998",
+            "_id": "fff501fd-5ce6-4508-8e15-3546ee67f24a",
+            "colId": "60d58388-a300-4ad3-983a-5d0a82f47d8a",
             "containerId": "",
-            "name": "EditarUsuario (token usuario)",
-            "url": "http://localhost:3000/api/v1/users/65e559613c245a9deefd76ce",
-            "method": "PUT",
+            "name": "Registrarse",
+            "url": "http://localhost:3000/api/v1/auth/registrarse",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-13T20:40:16.422Z",
+            "modified": "2024-03-13T21:42:03.641Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameU\": \"5\",\n  \"email\": \"5@kinal.edu.gt\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "3aa541e3-b374-45e6-bdd2-08b5959f0837",
+            "colId": "60d58388-a300-4ad3-983a-5d0a82f47d8a",
+            "containerId": "",
+            "name": "DeleteUser",
+            "url": "http://localhost:3000/api/v1/users/65f20b95b2a286fb88bbdfc1",
+            "method": "DELETE",
             "sortNum": 30000,
-            "created": "2024-03-09T20:30:22.726Z",
-            "modified": "2024-03-09T20:30:22.726Z",
+            "created": "2024-03-13T20:40:25.866Z",
+            "modified": "2024-03-13T20:40:25.866Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1NTk2MTNjMjQ1YTlkZWVmZDc2Y2UiLCJpYXQiOjE3MDk1Mjk4MDcsImV4cCI6MTcwOTUzMzQwN30.hfExkaUy1nVa4V8xdzPw26bsuDpEF2WEGKV9CiVqOoM"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYyMGI5NWIyYTI4NmZiODhiYmRmYzEiLCJpYXQiOjE3MTAzNjE2NTMsImV4cCI6MTcxMDM2NTI1M30.3nu8tRvW51m58TZze18UN8ot5IHutVfg5znu8yZG_G4"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "6f8316b0-1155-4faf-9bb6-e6964689d129",
+            "colId": "60d58388-a300-4ad3-983a-5d0a82f47d8a",
+            "containerId": "",
+            "name": "EditUser ADMIN",
+            "url": "http://localhost:3000/api/v1/users/65f20b95b2a286fb88bbdfc1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-13T20:40:33.278Z",
+            "modified": "2024-03-13T20:40:33.278Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYyMGI5NWIyYTI4NmZiODhiYmRmYzEiLCJpYXQiOjE3MTAzNjE2NTMsImV4cCI6MTcxMDM2NTI1M30.3nu8tRvW51m58TZze18UN8ot5IHutVfg5znu8yZG_G4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nameUser\": \"Leonel\",\n  \"email\": \"Leonel@kinal.edu.gt\",\n  \"oldPassword\": \"654321\",\n  \"newPassword\": \"654321\"\n}",
+                "raw": "{\n  \"nameUser\": \"Perro\",\n  \"email\": \"Perro@kinal.edu.gt\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\",\n  \"estado\": \"true\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "10d0b378-22a6-4459-a899-f05a284b8777",
+            "colId": "60d58388-a300-4ad3-983a-5d0a82f47d8a",
+            "containerId": "",
+            "name": "EditUser ClientsOnly",
+            "url": "http://localhost:3000/api/v1/users/put/65ea5f2f00d6645b29635e05",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-13T20:40:34.397Z",
+            "modified": "2024-03-13T20:40:34.397Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNWYyZjAwZDY2NDViMjk2MzVlMDUiLCJpYXQiOjE3MDk4NjEzMDIsImV4cCI6MTcwOTg2NDkwMn0.Yqsg6CzWgmyuL-K-ICa1wu6YqGOMEIWh--9hw0nf9Ok"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameUser\": \"mapache\",\n  \"oldPassword\": \"123456\",\n  \"newPassword\": \"123456\"\n}",
                 "form": []
             },
             "tests": []

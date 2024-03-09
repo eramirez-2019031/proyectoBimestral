@@ -3,8 +3,8 @@ import bcryptjs from 'bcryptjs';
 import { generarJWT } from '../helpers/generar-jwt.js';
 
 export const registrarse = async (req, res) => {
-    const { nameUser, email, password, role } = req.body;
-    const usuario = new User({ nameUser, email, password, role });
+    const { nameU, email, password, role } = req.body;
+    const usuario = new User({ nameU, email, password, role });
 
     const salt = bcryptjs.genSaltSync();
     usuario.password = bcryptjs.hashSync(password, salt);
@@ -26,21 +26,21 @@ export const login = async (req, res) => {
 
         if (!usuario) {
             return res.status(400).json({
-                msg: 'El correo no está registrado'
+                msg: 'El correo no está registrado en esta database'
             });
         }
         
 
         if (!usuario.estado) {
             return res.status(400).json({
-                msg: 'El usuario no existe'
+                msg: 'El usuario no existe en esta database'
             });
         }
 
         const validPassword = bcryptjs.compareSync(password, usuario.password);
         if (!validPassword) {
             return res.status(400).json({
-                msg: 'La contraseña no coincide'
+                msg: 'La contraseña no coincide con la asignada'
             });
         }
         
@@ -49,7 +49,7 @@ export const login = async (req, res) => {
 
 
         res.status(200).json({
-            msg: 'Se inicio secion',
+            msg: 'Se inicio secion exitosamente, bienvenido:',
             usuario,
             token
         });
@@ -58,7 +58,7 @@ export const login = async (req, res) => {
     } catch (error) {
         console.log("Error:", error);
         res.status(500).json({
-            msg: 'Error, hablele al admin'
+            msg: 'Error, hablele a un admin'
         });
     }
 }

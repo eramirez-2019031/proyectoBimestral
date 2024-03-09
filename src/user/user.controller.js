@@ -4,7 +4,7 @@ import User from '../user/user.js';
 export const userPutAdmin = async (req, res) => {
     try {
         const { id } = req.params;
-        const { nameUser, email, password, role, estado } = req.body;
+        const { nameU, email, password, role, estado } = req.body;
 
         const usuarioAutenticado = req.usuario;
         const tienePermisoAdmin = usuarioAutenticado.role === 'ADMIN_ROLE';
@@ -21,17 +21,17 @@ export const userPutAdmin = async (req, res) => {
                 msg: 'Usuario no encontrado',
             });
         }
-
-        if (nameUser) {
-            usuario.nameUser = nameUser;
+        
+        if (nameU) {
+            usuario.nameU = nameU;
         }
         if (email) {
             usuario.email = email;
         }
         if (password) {
-            const hashedPassword = await bcryptjs.hash(password, 10); // Hashear la nueva contraseña
-            usuario.password = hashedPassword; // Actualizar la contraseña hasheada en el usuario
-            console.log(`Contraseña actualizada para el usuario con ID ${id}`); // Imprimir en los logs la actualización de la contraseña
+            const hashedPassword = await bcryptjs.hash(password, 10); 
+            usuario.password = hashedPassword; 
+            console.log(`Contraseña actualizada para el usuario con ID ${id}`); 
         }
         if (role) {
             usuario.role = role; 
@@ -40,7 +40,7 @@ export const userPutAdmin = async (req, res) => {
             usuario.estado = estado;
         }
 
-        await usuario.save(); // Guardar los cambios en la base de datos
+        await usuario.save(); 
 
         res.status(200).json({
             msg: 'Se actualizó el perfil correctamente',
@@ -57,7 +57,7 @@ export const userPutAdmin = async (req, res) => {
 export const userPutClient = async (req, res) => {
     try {
         const { id } = req.params;
-        const {nameUser, oldPassword, newPassword} = req.body;
+        const {nameU, oldPassword, newPassword} = req.body;
 
         if (!oldPassword || !newPassword) {
             return res.status(400).json({
@@ -79,8 +79,8 @@ export const userPutClient = async (req, res) => {
             });
         }
 
-        if (nameUser) {
-            usuario.nameUser = nameUser;
+        if (nameU) {
+            usuario.nameU = nameU;
         }
 
         const hashedPassword = await bcryptjs.hash(newPassword, 10);

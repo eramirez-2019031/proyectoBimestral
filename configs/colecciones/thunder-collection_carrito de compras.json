@@ -1,0 +1,59 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "carrito de compras",
+    "dateExported": "2024-03-14T07:37:43.482Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3ea6b01a-73f9-4474-a490-b5dace6988e8",
+            "colId": "41873aae-cafc-4583-b994-7110e5b5b600",
+            "containerId": "",
+            "name": "PostCarrito",
+            "url": "http://localhost:3000/finalAPI/v1/cart/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-13T20:38:37.604Z",
+            "modified": "2024-03-14T07:26:51.543Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYyOTg3YTdlMDk2NzQwNGIxOWUzNGMiLCJpYXQiOjE3MTA0MDExOTgsImV4cCI6MTcxMDQwNDc5OH0.9lYF17CPAe1JQExbBDClqsUZyi_NV4EpHanleRfH0Rk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Date\": \"2000-05-12\",\n  \"user\": \"65f2987a7e0967404b19e34c\",\n  \"product\": \"Pruebanosequehacer\",\n  \"howMany\": \"3\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "93ae963d-f764-4b68-837b-3fdb11c95713",
+            "colId": "41873aae-cafc-4583-b994-7110e5b5b600",
+            "containerId": "",
+            "name": "DeleteCarrito",
+            "url": "http://localhost:3000/finalAPI/v1/cart/delete/65f28f7d18c8cab207204dd7",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-03-13T20:38:37.605Z",
+            "modified": "2024-03-14T05:51:49.575Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYyN2QzZGZhYjM3OTkxOWJmYTlkMDYiLCJpYXQiOjE3MTAzOTQwMjIsImV4cCI6MTcxMDM5NzYyMn0.MDDl0R0MOdbrm03B_HvzdHcXfu8WO804nYUbIjov8sQ"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userID\":\"65f27d3dfab379919bfa9d06\"\n}",
+                "form": []
+            },
+            "reqType": "del",
+            "tests": []
+        }
+    ]
+}

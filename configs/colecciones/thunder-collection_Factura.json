@@ -1,0 +1,58 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Factura",
+    "dateExported": "2024-03-14T07:38:00.013Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "df1bc628-9524-4f36-861a-fa6d09a2c0ae",
+            "colId": "a2f95b88-fd27-4a64-afe8-a182bd42c64c",
+            "containerId": "",
+            "name": "generar Factura",
+            "url": "http://localhost:3000/finalAPI/v1/bill/buyBill",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-14T03:54:15.537Z",
+            "modified": "2024-03-14T07:27:04.545Z",
+            "headers": [
+                {
+                    "name": "Token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYyOTg3YTdlMDk2NzQwNGIxOWUzNGMiLCJpYXQiOjE3MTA0MDExOTgsImV4cCI6MTcxMDQwNDc5OH0.9lYF17CPAe1JQExbBDClqsUZyi_NV4EpHanleRfH0Rk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameU\": \"cliente\",\n  \"idUsuario\":\"65f2987a7e0967404b19e34c\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "3178d14d-6ae0-4180-8a0c-0540407ebb27",
+            "colId": "a2f95b88-fd27-4a64-afe8-a182bd42c64c",
+            "containerId": "",
+            "name": "Editar Factura",
+            "url": "http://localhost:3000/finalAPI/v1/bill/billChange/65f2633ea1bc7bfa54b08555",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-14T03:54:15.538Z",
+            "modified": "2024-03-14T03:54:15.538Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwZmM3OGNmMDBkZjk4NTBjMjY3NTMiLCJpYXQiOjE3MTAzODgyMjAsImV4cCI6MTcxMDM5NTQyMH0.yWQJDb4ale90DAzQupW8PjsJMhAi-iXEAzPexaV_1SU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"cartQuant\": \"6\",\n  \"userID\": \"65f0fc78cf00df9850c26753\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

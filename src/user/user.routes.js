@@ -29,5 +29,5 @@ router.delete("/:id", [
     validarCampos
 ], deleteUser);
 
-
+    
 export default router;

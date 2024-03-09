@@ -9,8 +9,8 @@ const router = Router();
 router.post(
     '/registrarse', 
     [
-        check('nameUser', 'El nombre es obligatorio').not().isEmpty(),
-        check('password', 'El password debe ser de más de 6 letras').isLength({ min: 6 }),
+        check('nameU', 'El nombre es obligatorio').not().isEmpty(),
+        check('password', 'El password debe ser de más de 5 digitos').isLength({ min: 6 }),
         check('email', 'El correo no es válido').isEmail(),
         check('email').custom(existenteEmail),
         validarCampos
